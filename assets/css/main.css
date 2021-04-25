@@ -7097,6 +7097,11 @@ blockquote::before {
   padding: 20px;
   color: white;
 }
+.tvn h5{
+  color: white;
+  width: 75%;
+  margin: auto;
+}
 .tvn p {
   color: white;
   width: 75%;
