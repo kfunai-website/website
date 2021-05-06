@@ -118,10 +118,11 @@
     <section class="contact-section padding-bottom padding-top">
         <div class="container">
             <div class="contact-wrapper padding-bottom padding-top">
-                <div class="row">
+                <div class="row flex-container">
                     <div class="col-md-6">
                         <div class="contact-info bg_img" data-background="assets/images/contact/contact-side02.jpg">
                             <h4 class="title">Contact Info</h4>
+
                             <div class="item-info">
                                 <div class="icon">
                                     <i class="flaticon-pin"></i>
@@ -167,6 +168,66 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </div>
+                            <div class="col-md-9 mb-md-0 mb-5">
+                                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    
+                                    <!--Grid row-->
+                                    <div class="row">
+                    
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="name" name="name" class="form-control">
+                                                <label for="name" class="">Your name</label>
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+                    
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="email" name="email" class="form-control">
+                                                <label for="email" class="">Your email</label>
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+                    
+                                    </div>
+                                    <!--Grid row-->
+                    
+                                    <!--Grid row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="subject" name="subject" class="form-control">
+                                                <label for="subject" class="">Subject</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                    
+                                    <!--Grid row-->
+                                    <div class="row">
+                    
+                                        <!--Grid column-->
+                                        <div class="col-md-12">
+                    
+                                            <div class="md-form">
+                                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                                <label for="message">Your message</label>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                    
+                                </form>
+                    
+                                <div class="text-center text-md-left">
+                                    <a class="btn btn-primary" onclick="validateForm();">Send</a>
+                                </div>
+                                <div class="status"></div>
                             </div>
                         </div>
                     </div>
@@ -323,5 +384,6 @@
     <script src="assets/js/paroller.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-validation.js"></script>
 </body>
 </html>
