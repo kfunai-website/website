@@ -1,3 +1,9 @@
+if (window.matchMedia('screen and (max-width: 768px)').matches) {
+  document.getElementById("lg").className="logo_x";
+}
+else{
+  document.getElementById("lg").className="lg";
+}
 (function ($) {
   "user strict";
   // Preloader Js
