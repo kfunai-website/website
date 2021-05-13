@@ -4,6 +4,38 @@ if (window.matchMedia('screen and (max-width: 768px)').matches) {
 else{
   document.getElementById("lg").className="lg";
 }
+var i = 0;
+var txt = {"text":['KFUNAI','INFUNAI'],
+            "text2":['KERALA FORUM ON UNITED NATIONS ACADEMIC IMPACT','Indian National Forum in support of United Nations Academic Impact',],
+            "text3":['An independent \'NGO\' whose mission is to Promote United Nations Academic Impact in the State of Kerala and India','']};
+ /* The speed/duration of the effect in milliseconds */
+count=1
+function typeWriter() {
+  if(document.getElementById("trans").className=="trans")
+    document.getElementById("trans").className ="t";
+  else{
+    document.getElementById("trans").className ="trans";
+  }
+  
+  
+  document.getElementById("text").innerHTML = txt["text"][count];
+  document.getElementById("text2").innerHTML = txt["text2"][count];
+  document.getElementById("text3").innerHTML = txt["text3"][count];
+  
+
+  if (count == 0 ){
+    count = 1;
+    document.getElementById("text").style.color="black";
+    
+  }
+  else{
+    count =0;
+    document.getElementById("text").style.color="red";
+  }
+  
+  }
+setInterval(typeWriter, 8000);
+
 (function ($) {
   "user strict";
   // Preloader Js
