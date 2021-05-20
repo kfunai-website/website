@@ -7125,6 +7125,15 @@ blockquote::before {
 }
 
 /*Added styles*/
+.ram_lk{
+  color: white;
+}
+.ram_lk:hover{
+  color: black;
+}
+.ram_p{
+  padding-top: 50px;
+}
 
 .tvn {
   padding: 35px;
