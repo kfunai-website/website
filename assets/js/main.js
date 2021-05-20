@@ -1,5 +1,3 @@
-import Color from "https://colorjs.io/dist/color.esm.js";
-let flagorange = new Color("sRGB", [1, .6, .2], 1);
 if (window.matchMedia('screen and (max-width: 768px)').matches) {
   document.getElementById("lg").className = "logo_x";
 }
@@ -34,7 +32,7 @@ function typeWriter() {
   }
   else {
     count = 0;
-    document.getElementById("text").style.color = flagorange;
+    document.getElementById("text").style.color = "orange";
   }
 
 }
