@@ -7125,6 +7125,7 @@ blockquote::before {
 }
 
 /*Added styles*/
+
 .ram_lk{
   color: white;
 }
@@ -7134,7 +7135,30 @@ blockquote::before {
 .ram_p{
   padding-top: 50px;
 }
-
+.tv-flx{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+.tv-flx-bl{
+  flex: 30%;
+}
+.tv-flx-img{
+  flex: 40%;
+  /* align-items: center; */
+}
+.tv-flx-video{
+  flex: 30%;
+  /* align-items: right; */
+  /* width: "420"; */
+  /* height: "315"; */
+}
+@media (max-width: 800px) {
+  .tv-flx-video, .tv-flx-img {
+    flex: 100%;
+  }
+}
 .tvn {
   padding: 35px;
 
