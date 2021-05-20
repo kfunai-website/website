@@ -1,3 +1,43 @@
+if (window.matchMedia('screen and (max-width: 768px)').matches) {
+  document.getElementById("lg").className = "logo_x";
+}
+else {
+  document.getElementById("lg").className = "lg";
+}
+var i = 0;
+var txt = {
+  "text": ['KFUNAI', 'INFUNAI'],
+  "text2": ['KERALA FORUM ON UNITED NATIONS ACADEMIC IMPACT', 'Indian National Forum in support of United Nations Academic Impact',],
+  "text3": ['An independent \'NGO\' whose mission is to Promote United Nations Academic Impact in the State of Kerala and India', '']
+};
+/* The speed/duration of the effect in milliseconds */
+count = 1
+function typeWriter() {
+  if (document.getElementById("trans").className == "trans")
+    document.getElementById("trans").className = "t";
+  else {
+    document.getElementById("trans").className = "trans";
+  }
+
+
+  document.getElementById("text").innerHTML = txt["text"][count];
+  document.getElementById("text2").innerHTML = txt["text2"][count];
+  document.getElementById("text3").innerHTML = txt["text3"][count];
+
+
+  if (count == 0) {
+    count = 1;
+    document.getElementById("text").style.color = "black";
+
+  }
+  else {
+    count = 0;
+    document.getElementById("text").style.color = "orange";
+  }
+
+}
+setInterval(typeWriter, 5000);
+
 (function ($) {
   "user strict";
   // Preloader Js
@@ -61,15 +101,15 @@
     });
     //MenuBar
     $('.header-bar').on('click', function () {
-        $(".menu").toggleClass("active");
-        $(".header-bar").toggleClass("active");
-        $('.overlay').toggleClass('active');
+      $(".menu").toggleClass("active");
+      $(".header-bar").toggleClass("active");
+      $('.overlay').toggleClass('active');
     });
-    $('.search-button').on('click', function() {
+    $('.search-button').on('click', function () {
       $('.search-form').toggleClass('active');
       $('.overlay').addClass('active');
     });
-    $('.overlay').on('click', function() {
+    $('.overlay').on('click', function () {
       $(this).removeClass('active')
       $(".menu").removeClass("active");
       $(".header-bar").removeClass("active");
@@ -140,7 +180,7 @@
       tab.find('.tab-area').find('div.tab-item:eq(' + index + ')').show(150);
       g.preventDefault();
     });
-    $('.prev-but, .next-but').on('click', function() {
+    $('.prev-but, .next-but').on('click', function () {
       $('.next-but, .prev-but').removeClass('active');
       $(this).addClass('active');
     })
@@ -155,8 +195,8 @@
         }
       });
     });
-    $(".team-icon>i").parent(".team-icon").removeClass("team-icon");    
-    $(".gallery-icon>i").parent(".gallery-icon").removeClass("gallery-icon");    
+    $(".team-icon>i").parent(".team-icon").removeClass("team-icon");
+    $(".gallery-icon>i").parent(".gallery-icon").removeClass("gallery-icon");
     var swiper = new Swiper('.sponsor-slider', {
       slidesPerView: 4,
       loop: true,
@@ -170,7 +210,7 @@
         575: {
           slidesPerView: 1,
         },
-      }, 
+      },
       autoplay: {
         delay: 2500,
       }
