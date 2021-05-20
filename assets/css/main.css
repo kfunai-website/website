@@ -1528,11 +1528,37 @@ footer {
 .header-section.style-two * {
   color: #232323;
 }
-
+@media (max-width: 450px) {
+  .logo_x img {
+    width: 80px !important;
+  }
+}
 @media (max-width: 991px) {
   .header-section.style-two .search-button a i {
     color: #ffffff;
+    
   }
+  .logo_centre{
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+
+  .logo_x img {
+    padding: 5px;
+    margin: 0;
+    width: 50px;
+  }
+}
+.lg{
+  display: none;
+}
+.logo_x img {
+  width: 110px;
+}
+.logo_centre {
+  padding: 3px;
+ 
 }
 
 .header-section.style-two.active {
@@ -1614,7 +1640,7 @@ footer {
     transform: scaleY(1);
   }
 
-  .menu li {
+  .menu li:not(.logo_x) {
     border-bottom: 1px solid #1d26b8;
     padding: 0;
   }
@@ -2040,6 +2066,7 @@ footer {
   position: relative;
   z-index: 9;
   text-align: center;
+  
 }
 
 .banner-content * {
@@ -2719,6 +2746,19 @@ footer {
   display: block;
 }
 
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu:not(.logo_x) {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
 @media (min-width: 768px) {
   .privacy-sidebar {
     padding-left: 20px;
@@ -3650,7 +3690,7 @@ footer {
 
 .counter-item .odometer {
   margin-bottom: 10px;
-  font-size: 36px;
+  font-size: 50px;
   margin-top: -10px;
 }
 
@@ -7086,6 +7126,39 @@ blockquote::before {
 
 /*Added styles*/
 
+.ram_lk{
+  color: white;
+}
+.ram_lk:hover{
+  color: black;
+}
+.ram_p{
+  padding-top: 50px;
+}
+.tv-flx{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+.tv-flx-bl{
+  flex: 30%;
+}
+.tv-flx-img{
+  flex: 40%;
+  /* align-items: center; */
+}
+.tv-flx-video{
+  flex: 30%;
+  /* align-items: right; */
+  /* width: "420"; */
+  /* height: "315"; */
+}
+@media (max-width: 800px) {
+  .tv-flx-video, .tv-flx-img {
+    flex: 100%;
+  }
+}
 .tvn {
   padding: 35px;
 
@@ -7096,6 +7169,11 @@ blockquote::before {
   font-size: 50px;
   padding: 20px;
   color: white;
+}
+.tvn h5 {
+  color: white;
+  width: 75%;
+  margin: auto;
 }
 .tvn p {
   color: white;
@@ -7168,4 +7246,36 @@ blockquote::before {
   .sec h4 {
     margin-top: 20px;
   }
+}
+.t{
+  position: absolute;
+  left:-100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: white;
+  animation:move2;
+
+  animation-duration: 0.5s;
+}
+.trans{
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: white;
+  animation-name: move;
+  animation-duration: 0.5s;
+}
+
+@keyframes move {
+  0% {left: -100%;}
+  30% {left: 0%;}
+  100%{left: -100%;}
+}
+@keyframes move2 {
+  0% {left: -100%;}
+  30% {left: 0%;}
+  100%{left: -100%;}
 }
