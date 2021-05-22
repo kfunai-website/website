@@ -1137,7 +1137,8 @@ input[type="submit"] {
   overflow: hidden;
   height: 30vh;
   overflow: hidden;
-  transition-delay: 0.5s;
+
+  transition: all 1s;
 }
 .c-thumb:hover {
   height: 100%;
@@ -7191,6 +7192,16 @@ blockquote::before {
   width: 200px;
   border-radius: 25px;
   margin: 20px;
+  transition: all 0.2s ease;
+}
+.tv_p:hover {
+  opacity: 0;
+}
+.youtube{
+  background:url('../images/yt.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .ach img {
   width: 25px;
@@ -7203,7 +7214,7 @@ blockquote::before {
   width: 45vw;
   margin: auto;
   margin-top: 5vh;
-  text-align: left;
+  text-align: center;
 }
 .sec h4 {
   color: white;
@@ -7281,4 +7292,11 @@ blockquote::before {
   0% {left: -100%;}
   30% {left: 0%;}
   100%{left: -100%;}
+}
+.service-content{
+  background-color: white !important;
+  max-height: 300px !important;
+}
+.c-thumb{
+  max-height: 150px !important;
 }
