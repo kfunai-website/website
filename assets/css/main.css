@@ -7300,3 +7300,9 @@ blockquote::before {
 .c-thumb{
   max-height: 150px !important;
 }
+.ytc{
+  width: 50px;
+}
+.none{
+  display: none;
+}
