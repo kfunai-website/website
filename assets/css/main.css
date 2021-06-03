@@ -7238,7 +7238,15 @@ blockquote::before {
 .cards:hover {
   background-color: rgb(179, 202, 245);
 }
+.ifr{
+  display: none;
+}
 @media only screen and (max-width: 800px) {
+  .ifr{
+    display: block;
+    width:90%;
+    height: 200px;
+  }
   .d {
     display: none;
   }
