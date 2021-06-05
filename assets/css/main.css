@@ -1148,7 +1148,7 @@ input[type="submit"] {
 }
 
 .c-thumb img {
-  width: 100%;
+  width: 90%;
 }
 
 .light-color * {
@@ -3690,7 +3690,7 @@ footer {
 
 .counter-item .odometer {
   margin-bottom: 10px;
-  font-size: 50px;
+  font-size: 45px !important;
   margin-top: -10px;
 }
 
