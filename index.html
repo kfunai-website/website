@@ -42,8 +42,96 @@
     </a>
     <!-- ===========Header-Section=========== -->
     <header class="header-two">
+        <div>
+            <script language="JavaScript1.2">
 
-        <div class="header-section style-two">
+                /*
+                Cross browser Marquee script- (c) Dynamic Drive (www.dynamicdrive.com)
+                For full source code, 100's more DHTML scripts, and Terms Of Use, visit http://www.dynamicdrive.com
+                Credit MUST stay intact
+                */
+                
+                //Specify the marquee's width (in pixels)
+                var marqueewidth="2000px"
+                //Specify the marquee's height
+                var marqueeheight="25px"
+                //Specify the marquee's marquee speed (larger is faster 1-10)
+                var marqueespeed=2
+                //configure background color:
+                var marqueebgcolor="rgb(60, 66, 175)"
+                //Pause marquee onMousever (0=no. 1=yes)?
+                var pauseit=1
+                
+                //Specify the marquee's content (don't delete <nobr> tag)
+                //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+                
+                var marqueecontent='<nobr><font face="Arial">Farewell meeting for Mr. Ramu Damodaran is scheduled on 12th June 2021 at 8 pm IST on Zoom Platform. Actor Tovino Thomas, Special Guest,  will inaugurate the KFUNAI website.</font></nobr>'
+                
+                
+                ////NO NEED TO EDIT BELOW THIS LINE////////////
+                marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
+                var copyspeed=marqueespeed
+                var pausespeed=(pauseit==0)? copyspeed: 0
+                var iedom=document.all||document.getElementById
+                if (iedom)
+                document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+marqueecontent+'</span>')
+                var actualwidth=''
+                var cross_marquee, ns_marquee
+                
+                function populate(){
+                if (iedom){
+                cross_marquee=document.getElementById? document.getElementById("iemarquee") : document.all.iemarquee
+                cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+                cross_marquee.innerHTML=marqueecontent
+                actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+                }
+                else if (document.layers){
+                ns_marquee=document.ns_marquee.document.ns_marquee2
+                ns_marquee.left=parseInt(marqueewidth)+8
+                ns_marquee.document.write(marqueecontent)
+                ns_marquee.document.close()
+                actualwidth=ns_marquee.document.width
+                }
+                lefttime=setInterval("scrollmarquee()",20)
+                }
+                window.onload=populate
+                
+                function scrollmarquee(){
+                if (iedom){
+                if (parseInt(cross_marquee.style.left)>(actualwidth*(-1)+8))
+                cross_marquee.style.left=parseInt(cross_marquee.style.left)-copyspeed+"px"
+                else
+                cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+                
+                }
+                else if (document.layers){
+                if (ns_marquee.left>(actualwidth*(-1)+8))
+                ns_marquee.left-=copyspeed
+                else
+                ns_marquee.left=parseInt(marqueewidth)+8
+                }
+                }
+                
+                if (iedom||document.layers){
+                with (document){
+                document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+                if (iedom){
+                write('<div style="position:relative;width:'+marqueewidth+';height:'+marqueeheight+';overflow:hidden">')
+                write('<div style="position:absolute;width:'+marqueewidth+';height:'+marqueeheight+';color: white; background-color:'+marqueebgcolor+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">')
+                write('<div id="iemarquee" style="position:absolute;left:0px;top:0px"></div>')
+                write('</div></div>')
+                }
+                else if (document.layers){
+                write('<ilayer width='+marqueewidth+' height='+marqueeheight+' name="ns_marquee" bgColor='+marqueebgcolor+'>')
+                write('<layer name="ns_marquee2" left=0 top=0 onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed"></layer>')
+                write('</ilayer>')
+                }
+                document.write('</td></table>')
+                }
+                }
+                </script>
+        </div>
+            <div class="header-section style-two">
             <div class="container">
                 <div class="header-area">
                     <!-- <div class="logo2"> -->
@@ -64,11 +152,12 @@
                         </li>
 
                         <div class="logo_x logo_centre">
-                            <a href="index.html"><img src="assets/images/logo/unai.png" alt="logo"></a>
+                            <a href="index.html"><img src="assets/images/logo/UN LOGO.png" alt="logo"></a>
                         </div>
                         <li class="nav-item dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">People</a>
                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Patron</a></li>
                                 <li><a class="dropdown-item" href="team.html">Team</a></li>
                                 <li><a class="dropdown-item" href="advisors1.html">Advisors</a></li>
                                 <li><a class="dropdown-item" href="#">Presidential Page</a></li>
@@ -130,7 +219,7 @@
             <div class="about-wrapper">
                 <div class="about-thumb">
                     <div class="c-thumb">
-                        <img style="margin-top: -70px;" src="assets/images/about/about01.jpg" alt="about">
+                        <img style="margin-top: -120px;" src="assets/images/about/about01.jpg" alt="about">
                     </div>
                     <div class="about-thumb-content">
                         <h2 class="title">7</h2>
@@ -174,7 +263,7 @@
                     <p class="sub-title">Years of Experience</p>
                 </div>
                 <div class="counter-item">
-                    <h2 class="odometer plus" data-odometer-final="55">0</h2>
+                    <h2 class="odometer plus" data-odometer-final="65">0</h2>
                     <font size="10">+</font>
                     <p class="sub-title">Aspire Chapters</p>
                 </div>
@@ -184,7 +273,7 @@
                     <p class="sub-title">Events</p>
                 </div>
                 <div class="counter-item">
-                    <h2 class="odometer k" data-odometer-final="50000">0</h2>
+                    <h2 class="odometer k" data-odometer-final="110000">0</h2>
                     <font size="10">+</font>
                     <p class="sub-title">Effected People</p>
                 </div>
@@ -197,7 +286,7 @@
         style="text-align: center;color:white !important; background-attachment: auto;background:linear-gradient(0deg,  rgb(76, 1, 47) ,rgb(60, 66, 175));background-size: auto;background-repeat: no-repeat;background-color: white;">
 
             
-            <a href="https://www.youtube.com/embed/QEjq2SmVZn4?controls=0"><div class="youtube"><img class="tv_p tv-flx-img" src="assets/images/home/Damodaran-right.jpg"></div></a>
+            <a href="https://www.youtube.com/embed/QEjq2SmVZn4?controls=0"><div class="youtube"><img class="tv_p tv-flx-img" src="assets/images/home/ramu (1).jpg"></div></a>
 
 
             <!-- <div class="embed-responsive embed-responsive-16by9 tv-flx-video">
@@ -430,28 +519,64 @@
                     <div class="service-item-two wow slideInUp">
                         <div class="c-thumb">
                             <a
-                                href="https://www.onmanorama.com/career-and-campus/top-news/2019/12/09/how-youth-fight-climate-change-marian-college-event-shows-way.amp.html">
-                                <img src="assets/images/events/agenda.jpg" alt="service">
+                                href="#">
+                                <img src="assets/images/events/christ college.jpg" alt="service">
+                            </a>
+                        </div>
+                        <div class="service-content cards">
+                            <h6 class="subtitle">
+                                <a href="#">Inauguration of the UN Academic Impact Programme of CHRIST (Deemed to be University) Unit</a>
+                            </h6>
+                            <p>The United Nations Academic Impact programme of CHRIST
+                                (Deemed to be University) Unit was inaugurated by Dr. Fr.
+                                Abraham V M, Vice-Chancellor, CHRIST (Deemed to be
+                                University) on 8th February 2021 virtually. The event was
+                                graced by Mr. Saji Thomas, Former UN Civil Servant, UNHQ,
+                                New York, by delivering the Keynote Address.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                    <div class="service-item-two wow slideInUp">
+                        <div class="c-thumb">
+                            <a
+                                href="#">
+                                <img src="assets/images/events/global peace.jpg" alt="service">
                             </a>
                         </div>
                         <div class="service-content cards">
                             <h6 class="subtitle">
                                 <a
-                                    href="shttps://www.onmanorama.com/career-and-campus/top-news/2019/12/09/how-youth-fight-climate-change-marian-college-event-shows-way.amp.html">AGENDA
-                                    2.0</a>
+                                    href="#">DISTINGUISHED TALK ON “GLOBAL PEACE”</a>
                             </h6>
-                            <p>Agenda 2.0 is organized as the signature program of UNAI Aspire Marian. It is time to
-                                remember,
-                                rejoice and reach at its vision that forms the access of moral and intellectual
-                                formation among the youth.
-                                On that line, a platform is created in the form of a symposium at the national level
-                                where the young college students gather and discuss the pertinent issues
-                                of greater significance.<br><br><br><br></p>
+                            <p>Kerala Forum United Nation Academic Impact, UNAI Aspire chapter UKFCET and IEEE Industry Applications Society of UKFCET had jointly organized a prodigious event, a distinguished talk on “Global Peace” as a part of international peace day on 21st September 2020 by a dignified speaker Prof. Juan Carlos Science Borgo Former Diplomat and Dean University for Peace (UPEACE) Costa Rica.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-10 col-md-6 col-lg-4"></div>
-                <div class="col-sm-10 col-md-6 col-lg-4"></div>
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                    <div class="service-item-two wow slideInUp">
+                        <div class="c-thumb">
+                            <a
+                                href="#">
+                                <img src="assets/images/events/st. thomas.jpg" alt="service">
+                            </a>
+                        </div>
+                        <div class="service-content cards">
+                            <h6 class="subtitle">
+                                <a
+                                    href="#">75th UN DAY CELEBRATION</a>
+                            </h6>
+                            <p>The 75th UN day celebration which was conducted by St .Thomas College Kozhencherry on 26th
+                                October 2020 to celebrate the 75th anniversary of United Nations .There was 75 minutes of
+                                conversation on Sustainable Development Vision on 2030 . It was conducted by St. Thomas College
+                                and organised by the team members Mr.Arun John (co-ordinator) , Mr. Suresh Mathew George ,
+                                Dr . Martiz Kurian , Dr . Anju V. Jalaj . It was facilitated by the principal Dr.Mathew P .John. The chief
+                                guests for the program was Mr.Ramu Damodaran (UNAI Chief United nation , New York ) and Mr.
+                                Saji C . Thomas (Patron KFUNAI Former International Civil Servant United Nations ,New York ) .</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
