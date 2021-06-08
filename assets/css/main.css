@@ -1141,6 +1141,7 @@ input[type="submit"] {
 }
 .c-thumb:hover {
   height: 100%;
+
 }
 
 .c-thumb a {
@@ -1148,7 +1149,8 @@ input[type="submit"] {
 }
 
 .c-thumb img {
-  width: 100%;
+  width: 90%;
+  transition: all 2s ease;
 }
 
 .light-color * {
@@ -3690,7 +3692,7 @@ footer {
 
 .counter-item .odometer {
   margin-bottom: 10px;
-  font-size: 50px;
+  font-size: 45px !important;
   margin-top: -10px;
 }
 
@@ -7306,7 +7308,7 @@ blockquote::before {
   max-height: 300px !important;
 }
 .c-thumb{
-  max-height: 150px !important;
+  height: 150px;
 }
 .ytc{
   width: 50px;
