@@ -1,5 +1,7 @@
 if (window.matchMedia('screen and (max-width: 768px)').matches) {
   document.getElementById("lg").className = "logo_x";
+  document.getElementById("img_").className = "ytc";
+  document.getElementById("img_1").className = "ytc";
 }
 else {
   document.getElementById("lg").className = "lg";

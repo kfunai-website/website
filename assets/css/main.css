@@ -116,7 +116,6 @@ hr {
  */
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -1137,10 +1136,12 @@ input[type="submit"] {
   overflow: hidden;
   height: 30vh;
   overflow: hidden;
-  transition-delay: 0.5s;
+
+  transition: all 1s;
 }
 .c-thumb:hover {
   height: 100%;
+
 }
 
 .c-thumb a {
@@ -1148,7 +1149,8 @@ input[type="submit"] {
 }
 
 .c-thumb img {
-  width: 100%;
+  width: 90%;
+  transition: all 2s ease;
 }
 
 .light-color * {
@@ -3690,7 +3692,7 @@ footer {
 
 .counter-item .odometer {
   margin-bottom: 10px;
-  font-size: 50px;
+  font-size: 45px !important;
   margin-top: -10px;
 }
 
@@ -7135,6 +7137,7 @@ blockquote::before {
 .ram_p{
   padding-top: 50px;
 }
+
 .tv-flx{
   display: flex;
   flex-wrap: wrap;
@@ -7191,6 +7194,16 @@ blockquote::before {
   width: 200px;
   border-radius: 25px;
   margin: 20px;
+  transition: all 0.2s ease;
+}
+.tv_p:hover {
+  opacity: 0;
+}
+.youtube{
+  background:url('../images/yt.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .ach img {
   width: 25px;
@@ -7203,7 +7216,7 @@ blockquote::before {
   width: 45vw;
   margin: auto;
   margin-top: 5vh;
-  text-align: left;
+  text-align: center;
 }
 .sec h4 {
   color: white;
@@ -7227,7 +7240,15 @@ blockquote::before {
 .cards:hover {
   background-color: rgb(179, 202, 245);
 }
+.ifr{
+  display: none;
+}
 @media only screen and (max-width: 800px) {
+  .ifr{
+    display: block;
+    width:90%;
+    height: 200px;
+  }
   .d {
     display: none;
   }
@@ -7281,4 +7302,17 @@ blockquote::before {
   0% {left: -100%;}
   30% {left: 0%;}
   100%{left: -100%;}
+}
+.service-content{
+  background-color: white !important;
+  max-height: 300px !important;
+}
+.c-thumb{
+  height: 150px;
+}
+.ytc{
+  width: 50px;
+}
+.none{
+  display: none;
 }
