@@ -3207,6 +3207,7 @@ footer {
   .team-item {
     max-width: 350px;
   }
+
 }
 
 .team-item .team-content {
@@ -3579,6 +3580,7 @@ footer {
       #1d26b8 96%
     );
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -4223,6 +4225,9 @@ footer {
 @media (max-width: 991px) {
   .consult-thumb {
     margin-bottom: 50px;
+  }
+  .preloader{
+    display: none !important;
   }
 }
 
@@ -7316,3 +7321,4 @@ blockquote::before {
 .none{
   display: none;
 }
+
